@@ -58,22 +58,24 @@
                         <div class="card-body">
     
                             <div class="row">
+                                <form class="form-horizontal" method="post" action="<?php echo base_url('login/proses_login' ) ?>">
+                                    
                                 <div class="col-md-12 mb-3">
                                     
                                     <h2>Sign In</h2>
                                     <p>Enter your email and password to login</p>
                                     
                                 </div>
-                                <div class="col-md-12">
+                                <div style="margin-top: 50px" class="col-md-12">
                                     <div class="mb-3">
                                         <label class="form-label">Email</label>
-                                        <input type="email" class="form-control">
+                                        <input name="email" type="email" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="mb-4">
                                         <label class="form-label">Password</label>
-                                        <input type="text" class="form-control">
+                                        <input type="password" name="password" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -89,45 +91,17 @@
                                 
                                 <div class="col-12">
                                     <div class="mb-4">
-                                        <button class="btn btn-secondary w-100">SIGN IN</button>
+                                        <button type="submit" class="btn btn-secondary w-100">SIGN IN</button>
                                     </div>
                                 </div>
                                 
-                                <div class="col-12 mb-4">
-                                    <div class="">
-                                        <div class="seperator">
-                                            <hr>
-                                            <div class="seperator-text"> <span>Or continue with</span></div>
-                                        </div>
-                                    </div>
-                                </div>
                                 
-                                <div class="col-sm-4 col-12">
-                                    <div class="mb-4">
-                                        <button class="btn  btn-social-login w-100 ">
-                                            <img src="<?php echo base_url(); ?>assets/src/assets/img/google-gmail.svg" alt="" class="img-fluid">
-                                            <span class="btn-text-inner">Google</span>
-                                        </button>
-                                    </div>
-                                </div>
+                                
+                                
     
-                                <div class="col-sm-4 col-12">
-                                    <div class="mb-4">
-                                        <button class="btn  btn-social-login w-100">
-                                            <img src="<?php echo base_url(); ?>assets/src/assets/img/github-icon.svg" alt="" class="img-fluid">
-                                            <span class="btn-text-inner">Github</span>
-                                        </button>
-                                    </div>
-                                </div>
+                                
     
-                                <div class="col-sm-4 col-12">
-                                    <div class="mb-4">
-                                        <button class="btn  btn-social-login w-100">
-                                            <img src="<?php echo base_url(); ?>assets/src/assets/img/twitter.svg" alt="" class="img-fluid">
-                                            <span class="btn-text-inner">Twitter</span>
-                                        </button>
-                                    </div>
-                                </div>
+                                
 
                                 <div class="col-12">
                                     <div class="text-center">
@@ -135,6 +109,8 @@
                                     </div>
                                 </div>
                                 
+                            
+                                </form>
                             </div>
                             
                         </div>

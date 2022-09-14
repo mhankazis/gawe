@@ -32,7 +32,7 @@ class Login extends MX_Controller {
 	function proses_login()
 	{
 		// POST
-		$getUser = $this->input->post('username');
+		$getUser = $this->input->post('email');
 		$getPassword = sha1($this->input->post('password'));
 		// Get Data
 		$getData = $this->M_master_userid->getCredential($getUser, $getPassword);
@@ -51,7 +51,7 @@ class Login extends MX_Controller {
 			
 
 			    // redirect('data_dashboard');
-			    redirect('Admin_dashboard');
+			    redirect('dashboard');
 			    // echo $getData->id_siswa;
 
 			}
@@ -63,9 +63,10 @@ class Login extends MX_Controller {
 			}
 			
 
-		} else { // gagal login
+		} 
+		else { // gagal login
 
-			$this->session->set_flashdata('msg', 'loginError');
+			
 			redirect('login');
 		}
 
