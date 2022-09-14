@@ -23,7 +23,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] =  stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+// $config['base_url'] =  stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+
+$config['base_url'] = 'http://localhost/gawe/';
 
 //$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
