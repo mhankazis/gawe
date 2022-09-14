@@ -24,7 +24,7 @@ class template extends MX_Controller {
 	public function tampilCore($data)
 	{
 		$id = $this->session->userdata('session_id');
-		$data['woy'] = $this->m_template_admin->oke($id);
+		$data['woy'] = $this->m_template->oke($id);
 		// if($this->session->userdata('session_id') != "login"){
 		// 	redirect(base_url("login"));
 		// }
@@ -36,7 +36,7 @@ class template extends MX_Controller {
 		{
 			redirect(base_url("login"));
 		}
-		$data['nama'] = $this->m_template_admin->oke($id);
+		$data['nama'] = $this->m_template->oke($id);
 
 		
 		$this->load->view('view_template_core',$data);
