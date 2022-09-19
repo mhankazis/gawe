@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>CORK Admin - Multipurpose Bootstrap Dashboard Template </title>
     <link rel="icon" type="image/x-icon" href="<?php echo base_url(); ?>assets/src/assets/img/favicon.ico"/>
+     <link href="<?php echo base_url(); ?>assets/src/assets/css/dark/users/account-setting.css" rel="stylesheet" type="text/css" />
+     <link href="<?php echo base_url(); ?>assets/src/assets/css/light/users/account-setting.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(); ?>assets/layouts/vertical-light-menu/css/light/loader.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(); ?>assets/layouts/vertical-light-menu/css/dark/loader.css" rel="stylesheet" type="text/css" />
     <script src="<?php echo base_url(); ?>assets/layouts/vertical-light-menu/loader.js"></script>
+    
 
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
