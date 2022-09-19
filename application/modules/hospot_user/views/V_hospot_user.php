@@ -7,7 +7,7 @@
                      <div class="btn-group  mb-2 me-4" role="group">
                         <button id="btndefault" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CUSTOMER MANAGEMENT <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
                         <div class="dropdown-menu" aria-labelledby="btndefault">
-                            <a href="<?php echo base_url('hospot_user/service_plan/') ?>" class="dropdown-item"><i class="flaticon-home-fill-1 mr-1"></i>Add Customer</a>
+                            <a href="<?php echo base_url('hospot_user/service_information/') ?>" class="dropdown-item"><i class="flaticon-home-fill-1 mr-1"></i>Add Customer</a>
                             <a href="javascript:void(0);" class="dropdown-item"><i class="flaticon-gear-fill mr-1"></i>List Customer</a>
                             <a href="javascript:void(0);" class="dropdown-item"><i class="flaticon-bell-fill-2 mr-1"></i>Something else here</a>
                             <hr style="margin-top: -1px">
