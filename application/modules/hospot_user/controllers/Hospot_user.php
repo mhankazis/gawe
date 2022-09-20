@@ -42,7 +42,19 @@ class Hospot_user extends MX_Controller {
 	function add_customer()
 	{
 		$this->M_Hospot_user->add_customer();
-		redirect('Hospot_user/service_plan');
+		
+	}
+	function service_plan($id)
+	{
+
+		$data = array(
+			'namamodule' 	=> "Hospot_user",
+			'namafileview' 	=> "V_Hospot_add",
+			'id' 	=> $id,
+
+			
+		);
+		echo Modules::run('template/tampilCore', $data);
 	}
 
 
@@ -64,16 +76,7 @@ class Hospot_user extends MX_Controller {
 		);
 		echo Modules::run('template/tampilCore', $data);
 	}
-	function service_plan()
-	{
-
-		$data = array(
-			'namamodule' 	=> "Hospot_user",
-			'namafileview' 	=> "V_Hospot_add",
-			
-		);
-		echo Modules::run('template/tampilCore', $data);
-	}
+	
 
 	
 

@@ -44,7 +44,7 @@ class M_hospot_user extends CI_Model {
 
 		);
 		$this->db->insert('customer_information', $data);
-
+		redirect(base_url()."Hospot_user/service_plan/".$id_customer);
 
 		
 	}
