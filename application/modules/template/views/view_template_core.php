@@ -34,6 +34,7 @@
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
 
+    <script src="https://unpkg.com/feather-icons"></script>
     <!-- Load Esri Leaflet from CDN -->
     <script src="https://unpkg.com/esri-leaflet@3.0.1/dist/esri-leaflet.js"
     integrity="sha512-JmpptMCcCg+Rd6x0Dbg6w+mmyzs1M7chHCd9W8HPovnImG2nLAQWn3yltwxXRM7WjKKFFHOAKjjF2SC4CgiFBg=="
@@ -404,81 +405,332 @@
 
 
 
-            <li class="menu">
-                        <a href="#pages" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
-                            <div class="">
-
-
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-gear"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
-                                <span>App Setting</span>
-                            </div>
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                            </div>
-                        </a>
-                        <ul class="submenu list-unstyled collapse" id="pages" data-bs-parent="#accordionExample" style="">
-                            <li>
-                                <a href="./pages-knowledge-base.html"> General Setting </a>
-                            </li>
-                            <li>
-                                <a href="./pages-faq.html"> Localisation </a>
-                            </li>
-                            <li>
-                                <a href="./pages-contact-us.html" target="_blank"> User Management </a>
-                            </li>
-                            <li>
-                                <a href="./pages-error404.html" target="_blank"> Invoice Logo </a>
-                            </li>
-                            <li>
-                                <a href="./pages-maintenence.html" target="_blank"> Sms Setting </a>
-                            </li>
-                            <li>
-                                <a href="./pages-maintenence.html" target="_blank"> Email Setting </a>
-                            </li>
-                            <li>
-                                <a href="./pages-maintenence.html" target="_blank"> Whatsapp API </a>
-                            </li>
-                            <li>
-                                <a href="./pages-maintenence.html" target="_blank"> Whatsapp API </a>
-                            </li>
-                            <li>
-                                <a href="./pages-maintenence.html" target="_blank"> Google Map API </a>
-                            </li>
-                            <li>
-                                <a href="./pages-maintenence.html" target="_blank"> API Setting </a>
-                            </li>
-                            <li>
-                                <a href="./pages-maintenence.html" target="_blank"> Payment Gateaway </a>
-                            </li>
-                            <li>
-                                <a href="./pages-maintenence.html" target="_blank"> Voucher Template </a>
-                            </li>
-                            <li>
-                                <a href="./pages-maintenence.html" target="_blank"> Hotspot Domain </a>
-                            </li>
-                            <li>
-                                <a href="./pages-maintenence.html" target="_blank"> Called Station </a>
-                            </li>
-                        </ul>
-                    </li>
+            <li class="menu"
+            >             <a href="#pages" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
+                <div class="">
 
 
 
 
+                  <i data-feather="settings"></i>
 
-
-
-
-
-
-
-
-
-
+                  <span>App Setting</span>
+              </div>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+        </a>
+        <ul class="submenu list-unstyled collapse" id="pages" data-bs-parent="#accordionExample" style="">
+            <li>
+                <a href="./pages-knowledge-base.html"> General Setting </a>
+            </li>
+            <li>
+                <a href="./pages-faq.html"> Localisation </a>
+            </li>
+            <li>
+                <a href="./pages-contact-us.html" target="_blank"> User Management </a>
+            </li>
+            <li>
+                <a href="./pages-error404.html" target="_blank"> Invoice Logo </a>
+            </li>
+            <li>
+                <a href="./pages-maintenence.html" target="_blank"> Sms Setting </a>
+            </li>
+            <li>
+                <a href="./pages-maintenence.html" target="_blank"> Email Setting </a>
+            </li>
+            <li>
+                <a href="./pages-maintenence.html" target="_blank"> Whatsapp API </a>
+            </li>
+            <li>
+                <a href="./pages-maintenence.html" target="_blank"> Whatsapp API </a>
+            </li>
+            <li>
+                <a href="./pages-maintenence.html" target="_blank"> Google Map API </a>
+            </li>
+            <li>
+                <a href="./pages-maintenence.html" target="_blank"> API Setting </a>
+            </li>
+            <li>
+                <a href="./pages-maintenence.html" target="_blank"> Payment Gateaway </a>
+            </li>
+            <li>
+                <a href="./pages-maintenence.html" target="_blank"> Voucher Template </a>
+            </li>
+            <li>
+                <a href="./pages-maintenence.html" target="_blank"> Hotspot Domain </a>
+            </li>
+            <li>
+                <a href="./pages-maintenence.html" target="_blank"> Called Station </a>
+            </li>
         </ul>
+    </li>
 
-    </nav>
+
+    <li class="menu">
+        <a href="./app-calendar.html" aria-expanded="false" class="dropdown-toggle">
+            <div class="">
+                <i data-feather="shuffle"></i>
+
+                <span>Router [NAS]</span>
+            </div>
+        </a>
+    </li>
+
+
+    <li class="menu">
+        <a href="#ecommerce" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
+            <div class="">
+                <i data-feather="box"></i>
+
+                <span>ODP | POP Data</span>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+        </a>
+        <ul class="collapse submenu list-unstyled" id="ecommerce" data-bs-parent="#accordionExample">
+            <li>
+                <a href="./app-ecommerce-product-shop.html"> Manage ODP | POP </a>
+            </li>
+            <li>
+                <a href="./app-ecommerce-product.html"> View Map </a>
+            </li>                     
+        </ul>
+    </li>
+
+
+    <li class="menu">
+        <a href="#blog" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
+            <div class="">
+              <i data-feather="send"></i>
+
+              <span>Service Plan</span>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+    </a>
+    <ul class="collapse submenu list-unstyled" id="blog" data-bs-parent="#accordionExample">
+        <li>
+            <a href="./app-blog-grid.html"> Bandwidth </a>
+        </li>
+        <li>
+            <a href="./app-blog-list.html"> Profile Group </a>
+        </li>
+        <li>
+            <a href="./app-blog-post.html"> Hotspot Profile </a>
+        </li>
+        <li>
+            <a href="./app-blog-create.html"> PPP Profile </a>
+        </li>                            
+
+    </ul>
+</li>
+
+
+<li class="menu">
+    <a href="#elements" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
+        <div class="">
+           <i data-feather="credit-card"></i>
+           <span>Voucher Card</span>
+       </div>
+       <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </div>
+</a>
+<ul class="submenu list-unstyled collapse" id="elements" data-bs-parent="#accordionExample" style="">
+    <li>
+        <a href="./element-alerts.html"> Hotspot Voucher </a>
+    </li>
+    <li>
+        <a href="./element-avatar.html"> PPP Voucher </a>
+    </li>
+</ul>
+</li>
+
+
+<li class="menu">
+    <a href="#layouts" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
+        <div class="">
+            <i data-feather="file"></i>
+
+            <span>Unpaid Invoice</span>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+    </a>
+    <ul class="collapse submenu list-unstyled" id="layouts" data-bs-parent="#accordionExample">
+        <li>
+            <a href="./layout-blank-page.html"> All Invoice </a>
+        </li>
+        <li>
+            <a href="./layout-empty.html"> Invoice By Period </a>
+        </li>
+        
+        
+    </ul>
+</li>
+
+<li class="menu">
+    <a href="#datatables" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
+        <div class="">
+            <i data-feather="briefcase"></i>
+
+            <span>Finance Report </span>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+    </a>
+    <ul class="collapse submenu list-unstyled" id="datatables" data-bs-parent="#accordionExample">
+        <li>
+            <a href="./table-datatable-basic.html"> Reseller Topup </a>
+        </li>
+        <li>
+            <a href="./table-datatable-striped-table.html"> Daily Income </a>
+        </li>
+        <li>
+            <a href="./table-datatable-custom.html"> Period Income </a>
+        </li>
+        <li>
+            <a href="./table-datatable-miscellaneous.html"> Payout </a>
+        </li>
+        <li>
+            <a href="./table-datatable-miscellaneous.html"> Net Profit </a>
+        </li>
+        <li>
+            <a href="./table-datatable-miscellaneous.html"> Statistics </a>
+        </li>
+        <li>
+            <a href="./table-datatable-miscellaneous.html"> Reset Reports </a>
+        </li>
+    </ul>
+</li>
+
+<li class="menu">
+    <a href="#forms" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
+        <div class="">
+            <i data-feather="globe"></i>
+            <span>Online Payment</span>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+    </a>
+    <ul class="collapse submenu list-unstyled" id="forms" data-bs-parent="#accordionExample">
+        <li>
+            <a href="./form-bootstrap-basic.html"> NICEPAY </a>
+        </li>
+    </ul>
+</li>
+
+<li class="menu">
+    <a href="#authentication" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
+        <div class="">
+          <i data-feather="percent"></i>
+          <span>Support Tickets</span>
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </div>
+</a>
+<ul class="collapse submenu list-unstyled" id="authentication" data-bs-parent="#accordionExample">
+    <li>
+        <a href="./auth-boxed-signin.html" target="_blank"> All Tickets </a>
+    </li>
+    <li>
+        <a href="./auth-boxed-signup.html" target="_blank"> Opened Tickets </a>
+    </li>
+    <li>
+        <a href="./auth-boxed-lockscreen.html" target="_blank"> Closed Tickets </a>
+    </li>
+</ul>
+</li>
+
+
+
+
+<li class="menu">
+    <a href="#menuLevel11" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+        <div class="">
+         <i data-feather="tool"></i>
+         <span>System Tools</span>
+     </div>
+     <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </div>
+</a>
+<ul class="collapse submenu list-unstyled" id="menuLevel11" data-bs-parent="#accordionExample">
+    <li>
+        <a href="javascript:void(0);"> Usage Report </a>
+    </li>
+    <li>
+        <a href="javascript:void(0);"> Import User </a>
+    </li>
+    <li>
+        <a href="javascript:void(0);"> Export User </a>
+    </li>
+    <li>
+        <a href="javascript:void(0);"> Backup Restore </a>
+    </li>
+    <li>
+        <a href="javascript:void(0);"> Reset Database </a>
+    </li>
+
+
+</ul>
+</li>
+
+
+
+
+
+
+<li class="menu">
+    <a href="#menuLevel1" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+        <div class="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+            <span>Software Logs</span>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+    </a>
+    <ul class="collapse submenu list-unstyled" id="menuLevel1" data-bs-parent="#accordionExample">
+        <li>
+            <a href="javascript:void(0);"> Activity Log </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);"> Auth Log Record </a>
+        </li>
+
+
+    </ul>
+</li>
+
+<li class="menu">
+    <a href="./table-basic.html" aria-expanded="false" class="dropdown-toggle">
+        <div class="">
+            <i data-feather="share-2"></i>
+            <span>Neighbor List</span>
+        </div>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+</nav>
 
 </div>
 <!--  END SIDEBAR  -->
@@ -528,6 +780,8 @@
 <script src="<?php echo base_url(); ?>assets/src/plugins/src/apex/apexcharts.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/src/assets/js/dashboard/dash_1.js"></script>
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-
+<script type="text/javascript">
+    feather.replace();
+</script>
 </body>
 </html>
