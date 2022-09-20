@@ -7,6 +7,72 @@ class M_hospot_user extends CI_Model {
 	{
 		return $this->db->get('pengumuman')->result();
 	}
+
+
+
+	function add_customer()
+	{
+		$odp 		= $this->input->post('odp');
+		$id_customer	= $this->input->post('id_customer');
+		$name	= $this->input->post('name');
+		$id_card	= $this->input->post('id_card');
+		$mobile	= $this->input->post('mobile');
+		$email	= $this->input->post('email');
+		$username	= $this->input->post('username');
+		$password	= $this->input->post('password');
+		$lon	= $this->input->post('lon');
+		$lat	= $this->input->post('lat');
+
+
+
+		
+
+		$data = array(
+			'id_customer'		=> $id_customer,
+			'odp'		=> $odp,
+			'name' 				=> $name,
+			'id_card'						=>$id_card,
+			'mobile'						=>$mobile,
+			'email'						=>$email,
+			'username'						=>$username,
+			'password'						=>$password,
+			'latitude'						=>$lat,
+			'longitude'						=>$lon,
+
+
+
+
+		);
+		$this->db->insert('customer_information', $data);
+
+
+		
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  function hitsi()
 	{
 		

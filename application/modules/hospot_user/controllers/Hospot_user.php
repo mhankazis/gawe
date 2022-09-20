@@ -23,6 +23,37 @@ class Hospot_user extends MX_Controller {
 		);
 		echo Modules::run('template/tampilCore', $data);
 	}
+
+
+
+	function service_information()
+	{
+
+		$data = array(
+			'namamodule' 	=> "Hospot_user",
+			'namafileview' 	=> "V_service_info",
+			
+		);
+		echo Modules::run('template/tampilCore', $data);
+	}
+
+
+
+	function add_customer()
+	{
+		$this->M_Hospot_user->add_customer();
+		redirect('Hospot_user/service_plan');
+	}
+
+
+
+
+
+
+
+
+
+
 	function detail1()
 	{
 		$data = array(
@@ -43,16 +74,11 @@ class Hospot_user extends MX_Controller {
 		);
 		echo Modules::run('template/tampilCore', $data);
 	}
-	function service_information()
-	{
 
-		$data = array(
-			'namamodule' 	=> "Hospot_user",
-			'namafileview' 	=> "V_service_info",
-			
-		);
-		echo Modules::run('template/tampilCore', $data);
-	}
+	
+
+
+
 	function detail2()
 	{
 		$data = array(

@@ -40,7 +40,7 @@
                             <div class="tab-pane fade show active" id="animated-underline-home" role="tabpanel" aria-labelledby="animated-underline-home-tab">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 layout-spacing">
-                                        <form class="section general-info">
+                                        <form method="post" action="<?php echo base_url('hospot_user/add_customer' ) ?>" class="section general-info">
                                             <div class="info">
                                                 <h6 class="">Add Customer</h6>
                                                 <div class="row">
@@ -48,17 +48,16 @@
                                                         <div class="row">
 
                                                             <div class="col-xl-12 col-lg-12 col-md-8 mt-md-0 mt-4">
-                                                                <div class="form">
+                                                               
+                                                                
                                                                     <div class="row">
                                                                         <div style="margin-bottom: 15px" class="col-md-12">
                                                                             <div class="form-group">
                                                                                 <label for="profession"><b>ODP | POP ( Optional )   </b></label>
-                                                                                <select class="form-select" id="exampleFormControlSelect1">
-                                                                                    <option>1</option>
-                                                                                    <option>2</option>
-                                                                                    <option>3</option>
-                                                                                    <option>4</option>
-                                                                                    <option>5</option>
+                                                                                <select required name="odp" class="form-select" id="exampleFormControlSelect1">
+                                                                                    <option value="- No ODP | POP -">No ODP | POP -</option>
+                                                                                    <option value="ODP CAREK - ODP CAREK 002-001-000">ODP CAREK - ODP CAREK 002-001-000</option>
+                                                                                   
                                                                                 </select>
 
                                                                             </div>
@@ -67,19 +66,21 @@
                                                                         <div style="margin-bottom: 20px" class="col-md-6">
                                                                             <div class="form-group">
                                                                                 <label for="address"> <b>Customer ID</b></label>
-                                                                                <input type="number" class="form-control mb-3" id="address" placeholder="Customer ID"  >
+                                                                                <input type="text" name="id_customer" class="form-control mb-3" id="address" placeholder="Customer ID"  >
                                                                                 <p style="margin-top: -10px;     font-size: smaller;">LETTERS AND NUMBERS ONLY</p>
                                                                             </div>
                                                                         </div>
+
+
                                                                         <div class="col-md-6">
                                                                             <div class="form-group">
                                                                                 <label for="address"><b>Name</b></label>
-                                                                                <input type="text" class="form-control mb-3" id="address" placeholder="Full Name" >
+                                                                                <input name="name" type="text" class="form-control mb-3" id="address" placeholder="Full Name" >
                                                                             </div>
                                                                         </div>
                                                                         <div style="margin-bottom: 15px" class="col-md-12"><div class="form-group">
                                                                             <label for="address"><b> ID Card | Driver Licence | Passport</b></label>
-                                                                            <input type="text" class="form-control mb-3" id="address" placeholder="0000000000000000000000000" >
+                                                                            <input type="text" name="id_card" class="form-control mb-3" id="address" placeholder="0000000000000000000000000" >
                                                                         </div></div>
 
 
@@ -87,7 +88,7 @@
                                                                         <div style="margin-bottom: 15px" class="col-md-6">
                                                                             <div class="form-group">
                                                                                 <label for="address"><b>  Mobile Phone</b></label>
-                                                                                <input type="text" class="form-control mb-3" id="address" placeholder="International Phone Format" >
+                                                                                <input type="text" name="mobile" class="form-control mb-3" id="address" placeholder="International Phone Format" >
 
 
                                                                             </div>
@@ -98,7 +99,7 @@
 
                                                                             <div class="form-group">
                                                                                 <label for="address"><b>  Email</b></label>
-                                                                                <input type="text" class="form-control mb-3" id="address" placeholder="Example@mail.com" >
+                                                                                <input type="email" name="email" class="form-control mb-3" id="address" placeholder="Example@mail.com" >
                                                                             </div>
                                                                             
                                                                         </div>
@@ -106,7 +107,7 @@
 
                                                                             <div class="form-group">
                                                                                 <label for="address"><b>  Username</b></label>
-                                                                                <input type="text" class="form-control mb-3" id="address" placeholder="Username" >
+                                                                                <input type="text" name="username" class="form-control mb-3" id="address" placeholder="Username" >
                                                                             </div>
                                                                             
                                                                         </div>
@@ -114,7 +115,7 @@
 
                                                                             <div class="form-group">
                                                                                 <label for="address"><b>  Password</b></label>
-                                                                                <input type="text" class="form-control mb-3" id="address" placeholder="Password" >
+                                                                                <input type="text" name="password" class="form-control mb-3" id="address" placeholder="Password" >
                                                                             </div>
                                                                             
                                                                         </div>
@@ -168,11 +169,12 @@
 
                                                                     <div class="col-md-12 mt-5">
                                                                         <div class="form-group text-end">
-                                                                            <button class="btn btn-secondary">Add Customer</button>
+                                                                            <button type="submit" class="btn btn-secondary">Add Customer</button>
                                                                         </div>
                                                                     </div>
+                                                                  
 
-                                                                </div>
+                                                              
 
                                                             </div>
                                                         </div>
