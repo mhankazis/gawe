@@ -50,7 +50,7 @@
                                                                         <div class="col-md-6">
                                                                             <div  class="form-group">
                                                                                 <label style="margin-bottom: 20px" for="profession"> Type</label><br>
-                                                                                <input name="hotspot" value="hotspot" class="form-check-input" type="radio" name="radio-checked" id="form-check-radio-default">
+                                                                                <input name="type_service" value="hotspot" class="form-check-input" type="radio" name="radio-checked" id="form-check-radio-default">
                                                                                 <label class="form-check-label" for="form-check-radio-default">
                                                                                     HOTSPOT
                                                                                 </label></div>
@@ -61,10 +61,10 @@
                                                                                     <label for="profession">Server Name</label>
                                                                                     <select name="sever_name" class="form-select" id="exampleFormControlSelect1">
                                                                                         <option value="1">1</option>
-                                                                                        <option>2</option>
-                                                                                        <option>3</option>
-                                                                                        <option>4</option>
-                                                                                        <option>5</option>
+                                                                                        <option value="2">2</option>
+                                                                                        <option value="3">3</option>
+                                                                                        <option value="4">4</option>
+                                                                                        <option value="5">5</option>
                                                                                     </select>
 
                                                                                 </div>
@@ -84,14 +84,14 @@
 
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                    
+
                                                                                     <label for="country">Pay Status</label>
                                                                                     <select name="trx_status" id="trx_status"  class="form-select mb-3">
 
                                                                                         <option value="PAID" id="paid" selected="selected">PAID</option>
                                                                                         <option value="UNPAID" id="unpaid">UNPAID</option>
                                                                                     </select>
-                                                                                
+
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6">
@@ -134,8 +134,12 @@
                                                                                     <label for="country">Service Plan</label>
                                                                                     <select name="service_plan"  class="form-select mb-3" id="select-state" >
 
-                                                                                        <option value="NO">NO</option>
-                                                                                        <option value="YES">YES</option>
+
+                                                                                        <option value="1">1</option>
+                                                                                        <option value="2">2</option>
+                                                                                        <option value="3">3</option>
+
+
                                                                                     </select>
                                                                                 </div>
                                                                             </div>
@@ -172,11 +176,11 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-12">
-                                                                                 <label for="address"><b>Nominal Writing :</b></label>
-                                                                                <span class="help-block text-green text-bold"><ul><li>Without thousands separator, use dot (.) for fractions</li><li>Reseller Fee : can be set manually or set to zero ( 0 ) if you want to use<br> fee from the profile sell price</li></ul></span></div>
+                                                                               <label for="address"><b>Nominal Writing :</b></label>
+                                                                               <span class="help-block text-green text-bold"><ul><li>Without thousands separator, use dot (.) for fractions</li><li>Reseller Fee : can be set manually or set to zero ( 0 ) if you want to use<br> fee from the profile sell price</li></ul></span></div>
 
 
-                                                                            <div style="margin-top: 15px" class="col-md-12">
+                                                                               <div style="margin-top: 15px" class="col-md-12">
                                                                                 <div class="form-group">
 
                                                                                     <label for="address">Change Due Date - Optional</label>
@@ -350,18 +354,18 @@
 <!--  END FOOTER  -->
 
 <script>
-     $("#payment_type").change(function(){
+   $("#payment_type").change(function(){
     if ($('#prepaid').is(':selected')) {
-     $('#unpaid').removeAttr('selected'); 
-     $('#paid').attr('selected','selected'); 
-     $('#trx_status').removeAttr('disabled');
-    }
- 
-    if ($('#postpaid').is(':selected')) {
-     $('#paid').removeAttr('selected'); 
-     $('#unpaid').attr('selected','selected');
-     $('#trx_status').attr('disabled','disabled'); 
-    }
-   });   
+       $('#unpaid').removeAttr('selected'); 
+       $('#paid').attr('selected','selected'); 
+       $('#trx_status').removeAttr('disabled');
+   }
+
+   if ($('#postpaid').is(':selected')) {
+       $('#paid').removeAttr('selected'); 
+       $('#unpaid').attr('selected','selected');
+       $('#trx_status').attr('disabled','disabled'); 
+   }
+});   
    
- </script>
+</script>

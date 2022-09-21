@@ -4,7 +4,7 @@
             <div class="widget-content widget-content-area">
                 <table id="individual-col-search" class="table dt-table-hover">
                     <thead>
-                     <div class="btn-group  mb-2 me-4" role="group">
+                       <div class="btn-group  mb-2 me-4" role="group">
                         <button id="btndefault" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CUSTOMER MANAGEMENT <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
                         <div class="dropdown-menu" aria-labelledby="btndefault">
                             <a href="<?php echo base_url('hospot_user/service_information/') ?>" class="dropdown-item"><i class="flaticon-home-fill-1 mr-1"></i>Add Customer</a>
@@ -16,7 +16,7 @@
                         </div>
                     </div><hr>
                     <tr>
-                        <th class="text-center">ID</th>
+                        <th class="text-center">Customer ID</th>
                         <th>Name</th>
                         <th>Service Type</th>
                         <th>Service Plan</th>
@@ -28,17 +28,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="text-center">1</td>
-                        <td>Tiger Nixon</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>61</td>
-                        <td>2011/04/25</td>
+                    <?php foreach($show as $res) {
+                        ?>
+                        <tr>
+                            <td class="text-center"><?php echo $res->id_customer?></td>
+                            <td><?php echo $res->name?></td>
+                            <td><?php echo $res->type_service?></td>
+                            <td><?php echo $res->id_service_plan?></td>
+                            <td>-</td>
+                            <td><?php echo $res->due_date?></td>
 
-                        <td>$320,800</td>
-                        <td class="text-center"><a href="javascript:void(0);" class="bs-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" data-original-title="Delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle table-cancel"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></a></td>
-                    </tr>
+                            <td><?php echo $res->id_data_owner?></td>
+                            <td class="text-center"><a href="javascript:void(0);" class="bs-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" data-original-title="Delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle table-cancel"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></a></td>
+                        </tr>
+                    <?php }?>
                 </tbody>
 
             </table>

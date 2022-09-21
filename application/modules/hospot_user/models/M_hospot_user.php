@@ -3,9 +3,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_hospot_user extends CI_Model {
 
-	function tampil()
+	function show()
 	{
-		return $this->db->get('pengumuman')->result();
+		
+		$this->db->select('*')
+		->join('customer_service', 'customer_service.id_customer = customer_information.id_customer')
+		 ->order_by(`nama_kelas`, "desc");
+	
+		$query = $this->db->get('customer_information');
+		return $query->result();
 	}
 
 
@@ -20,6 +26,8 @@ class M_hospot_user extends CI_Model {
 		$email	= $this->input->post('email');
 		$username	= $this->input->post('username');
 		$password	= $this->input->post('password');
+		$password_enc	= sha1($password);
+
 		$lon	= $this->input->post('lon');
 		$lat	= $this->input->post('lat');
 
@@ -35,7 +43,7 @@ class M_hospot_user extends CI_Model {
 			'mobile'						=>$mobile,
 			'email'						=>$email,
 			'username'						=>$username,
-			'password'						=>$password,
+			'password'						=>$password_enc,
 			'latitude'						=>$lat,
 			'longitude'						=>$lon,
 
@@ -45,6 +53,56 @@ class M_hospot_user extends CI_Model {
 		);
 		$this->db->insert('customer_information', $data);
 		redirect(base_url()."Hospot_user/service_plan/".$id_customer);
+
+		
+	}
+
+
+	function add_service($id)
+	{
+		$id_server_name 		= $this->input->post('sever_name');
+		$id_data_owner	= $this->input->post('data_owner');
+		$id_service_plan	= $this->input->post('service_plan');
+		$type_service	= $this->input->post('type_service');
+		$payment_type	= $this->input->post('payment_type');
+		$payment_status	= $this->input->post('trx_status');
+		$account_status	= $this->input->post('account_status');
+		$bind_login	= $this->input->post('bind_login');
+		$discount	= $this->input->post('discount');
+		$reseller_fee	= $this->input->post('reseller_fee');
+		$instalation_fee	= $this->input->post('instalation_fee');
+		$device_fee	= $this->input->post('device_fee');
+		$due_date	= $this->input->post('due_date');
+
+
+
+
+		$data = array(
+			'id_customer'		=> $id,
+			'id_server_name'	=> $id_server_name,
+			'id_data_owner' 	=> $id_data_owner,
+			'id_service_plan'			=>$id_service_plan,
+			'type_service'			=>$type_service,
+			'payment_type'				=>$payment_type,
+			'payment_status'			=>$payment_status,
+			'account_status'			=>$account_status,
+			'bind_login'			=>$bind_login,
+			'discount'			=>$discount,
+			'discount'			=>$discount,
+			'reseller_fee'			=>$reseller_fee,
+			'instalation_fee'			=>$instalation_fee,
+			'device_fee'			=>$device_fee,
+			'due_date'			=>$due_date,
+
+
+
+
+
+
+
+		);
+		$this->db->insert('customer_service', $data);
+		
 
 		
 	}
@@ -73,7 +131,7 @@ class M_hospot_user extends CI_Model {
 
 
 
- function hitsi()
+	function hitsi()
 	{
 		
 		$this->db->select('*')
