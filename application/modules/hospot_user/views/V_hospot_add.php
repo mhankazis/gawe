@@ -37,7 +37,7 @@
                             <div class="tab-pane fade show active" id="animated-underline-home" role="tabpanel" aria-labelledby="animated-underline-home-tab">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 layout-spacing">
-                                        <form method="post" action="<?php echo base_url('hospot_user/add_service' ) ?>" class="section general-info">
+                                        <form method="post" action="<?php echo base_url('hospot_user/add_service/'.$id) ?>" class="section general-info">
                                             <div class="info">
                                                 <h6 class="">Add Customer</h6>
                                                 <div class="row">
