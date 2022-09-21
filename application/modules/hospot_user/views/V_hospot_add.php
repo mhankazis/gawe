@@ -1,6 +1,4 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+<script src="https://demo.mixradius.com:2143/theme/default/assets/jquery/jquery.min.js"></script>
 <div class="layout-px-spacing">
 
     <div class="middle-content container-xxl p-0">
@@ -39,7 +37,7 @@
                             <div class="tab-pane fade show active" id="animated-underline-home" role="tabpanel" aria-labelledby="animated-underline-home-tab">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 layout-spacing">
-                                        <form class="section general-info">
+                                        <form method="post" action="<?php echo base_url('hospot_user/add_service' ) ?>" class="section general-info">
                                             <div class="info">
                                                 <h6 class="">Add Customer</h6>
                                                 <div class="row">
@@ -52,17 +50,17 @@
                                                                         <div class="col-md-6">
                                                                             <div  class="form-group">
                                                                                 <label style="margin-bottom: 20px" for="profession"> Type</label><br>
-                                                                                <input  class="form-check-input" type="radio" name="radio-checked" id="form-check-radio-default">
+                                                                                <input name="hotspot" value="hotspot" class="form-check-input" type="radio" name="radio-checked" id="form-check-radio-default">
                                                                                 <label class="form-check-label" for="form-check-radio-default">
                                                                                     HOTSPOT
                                                                                 </label></div>
                                                                             </div>
-
+                                                                            <input type="hidden" name="id_customer" value="<?php echo $id?>">
                                                                             <div style="margin-bottom: 35px" class="col-md-6">
                                                                                 <div class="form-group">
                                                                                     <label for="profession">Server Name</label>
-                                                                                    <select class="form-select" id="exampleFormControlSelect1">
-                                                                                        <option>1</option>
+                                                                                    <select name="sever_name" class="form-select" id="exampleFormControlSelect1">
+                                                                                        <option value="1">1</option>
                                                                                         <option>2</option>
                                                                                         <option>3</option>
                                                                                         <option>4</option>
@@ -76,27 +74,33 @@
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
                                                                                     <label for="country">Payment Type</label>
-                                                                                    <select  class="form-select mb-3" id="myselect">
+                                                                                    <select name="payment_type" id="payment_type"  class="form-select mb-3">
 
-                                                                                        <option selected>PREPAID</option>
-                                                                                        <option>POSTPAID</option>
+                                                                                        <option value="PREPAID" id="prepaid">PREPAID</option>
+                                                                                        <option value="POSTPAID" id="postpaid">POSTPAID</option>
                                                                                     </select>
                                                                                 </div>
                                                                             </div>
 
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                    <label for="address">Pay Status</label>
-                                                                                    <input type="text" class="form-control mb-3" id="address" placeholder="Address" value="New York" >
+                                                                                    
+                                                                                    <label for="country">Pay Status</label>
+                                                                                    <select name="trx_status" id="trx_status"  class="form-select mb-3">
+
+                                                                                        <option value="PAID" id="paid" selected="selected">PAID</option>
+                                                                                        <option value="UNPAID" id="unpaid">UNPAID</option>
+                                                                                    </select>
+                                                                                
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
                                                                                     <label for="country">Account Status</label>
-                                                                                    <select  class="form-select mb-3" id="myselect">
+                                                                                    <select name="account_status" class="form-select mb-3" id="myselect">
 
-                                                                                        <option selected>ENABLED</option>
-                                                                                        <option>DISABLED</option>
+                                                                                        <option  value="Enable">ENABLED</option>
+                                                                                        <option value="Disable">DISABLED</option>
                                                                                     </select>
                                                                                 </div>
                                                                             </div>
@@ -104,10 +108,12 @@
 
                                                                                 <div class="form-group">
                                                                                     <label for="country">Data Owner</label>
-                                                                                    <select  class="form-select mb-3" id="select-state" >
+                                                                                    <select name="data_owner"  class="form-select mb-3" id="select-state" >
 
-                                                                                        <option selected>tes</option>
-                                                                                        <option>tes</option>
+                                                                                        <option value="1">1</option>
+                                                                                        <option value="2">2</option>
+                                                                                        <option value="3">3</option>
+
                                                                                     </select>
                                                                                 </div>
                                                                             </div>
@@ -115,10 +121,10 @@
                                                                                 <div class="form-group">
 
                                                                                     <label for="country">Bind On Login</label>
-                                                                                    <select  class="form-select mb-3" id="select-state" >
+                                                                                    <select name="bind_login" class="form-select mb-3" id="select-state" >
 
-                                                                                        <option selected>NO</option>
-                                                                                        <option>YES</option>
+                                                                                        <option value="NO">NO</option>
+                                                                                        <option value="YES">YES</option>
                                                                                     </select>
 
                                                                                 </div>
@@ -126,10 +132,10 @@
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
                                                                                     <label for="country">Service Plan</label>
-                                                                                    <select  class="form-select mb-3" id="select-state" >
+                                                                                    <select name="service_plan"  class="form-select mb-3" id="select-state" >
 
-                                                                                        <option selected>NO</option>
-                                                                                        <option>YES</option>
+                                                                                        <option value="NO">NO</option>
+                                                                                        <option value="YES">YES</option>
                                                                                     </select>
                                                                                 </div>
                                                                             </div>
@@ -137,7 +143,7 @@
                                                                                 <div class="form-group">
 
                                                                                     <label for="address">Discount ( One Time )</label>
-                                                                                    <input type="number" class="form-control mb-3 uang" id="address" placeholder="Address" value="0" >
+                                                                                    <input name="discount" type="number" class="form-control mb-3 uang" id="address" placeholder="Address" value="0" >
 
                                                                                 </div>
                                                                             </div>
@@ -145,7 +151,7 @@
                                                                                 <div class="form-group">
 
                                                                                     <label for="address">Reseller Fee</label>
-                                                                                    <input type="number" class="form-control mb-3 uang" id="address" placeholder="Address" value="0" >
+                                                                                    <input name="reseller_fee" type="number" class="form-control mb-3 uang" id="address" placeholder="Address" value="0" >
 
                                                                                 </div>
                                                                             </div>
@@ -153,7 +159,7 @@
                                                                                 <div class="form-group">
 
                                                                                     <label for="address">Instalation Fee</label>
-                                                                                    <input type="number" class="form-control mb-3 uang" id="address" placeholder="Address" value="0" >
+                                                                                    <input name="instalation_fee" type="number" class="form-control mb-3 uang" id="address" placeholder="Address" value="0" >
 
                                                                                 </div>
                                                                             </div>
@@ -161,7 +167,20 @@
                                                                                 <div class="form-group">
 
                                                                                     <label for="address">Device Fee</label>
-                                                                                    <input type="number" class="form-control mb-3 uang" id="address" placeholder="Address" value="0" >
+                                                                                    <input name="device_fee" type="number" class="form-control mb-3 uang" id="address" placeholder="Address" value="0" >
+
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-12">
+                                                                                 <label for="address"><b>Nominal Writing :</b></label>
+                                                                                <span class="help-block text-green text-bold"><ul><li>Without thousands separator, use dot (.) for fractions</li><li>Reseller Fee : can be set manually or set to zero ( 0 ) if you want to use<br> fee from the profile sell price</li></ul></span></div>
+
+
+                                                                            <div style="margin-top: 15px" class="col-md-12">
+                                                                                <div class="form-group">
+
+                                                                                    <label for="address">Change Due Date - Optional</label>
+                                                                                    <input type="date" name="due_date" class="form-control mb-3 uang" id="address" placeholder="Address" value="0" >
 
                                                                                 </div>
                                                                             </div>
@@ -330,3 +349,19 @@
 
 <!--  END FOOTER  -->
 
+<script>
+     $("#payment_type").change(function(){
+    if ($('#prepaid').is(':selected')) {
+     $('#unpaid').removeAttr('selected'); 
+     $('#paid').attr('selected','selected'); 
+     $('#trx_status').removeAttr('disabled');
+    }
+ 
+    if ($('#postpaid').is(':selected')) {
+     $('#paid').removeAttr('selected'); 
+     $('#unpaid').attr('selected','selected');
+     $('#trx_status').attr('disabled','disabled'); 
+    }
+   });   
+   
+ </script>
