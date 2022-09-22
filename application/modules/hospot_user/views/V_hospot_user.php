@@ -1,10 +1,14 @@
+    <link href="<?php echo base_url(); ?>assets/src/assets/css/light/components/modal.css" rel="stylesheet" type="text/css">
+
+
+
 <div class="row layout-spacing">
     <div class="col-lg-12">
         <div class="statbox widget box box-shadow">
             <div class="widget-content widget-content-area">
                 <table id="individual-col-search" class="table dt-table-hover">
                     <thead>
-                       <div class="btn-group  mb-2 me-4" role="group">
+                     <div class="btn-group  mb-2 me-4" role="group">
                         <button id="btndefault" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CUSTOMER MANAGEMENT <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
                         <div class="dropdown-menu" aria-labelledby="btndefault">
                             <a href="<?php echo base_url('hospot_user/service_information/') ?>" class="dropdown-item"><i class="flaticon-home-fill-1 mr-1"></i>Add Customer</a>
@@ -33,26 +37,45 @@
                         <tr>
                             <td class="text-center"><?php echo $res->id_customer?></td>
                             <td><?php echo $res->name?></td>
-                            <td><?php echo $res->type_service?></td>
+                            <td><span class="badge badge-light-success">Pre</span> <?php echo $res->type_service?></td>
                             <td><?php echo $res->plan_name?></td>
                             <td><?php echo $res->due_date?></td>
                             <?php
                             if ($res->time_limit=='unlimited') 
                                 {?>
-                               <td style="color: #00c0ef"><b>unlimited</b></td>
-                            <?php } else{?>
-                                 <td><b><?php echo $res->time_limit?></b></td>
-                             <?php }?>
+                                 <td style="color: #00c0ef"><b>unlimited</b></td>
+                             <?php } else{?>
+                               <td><b><?php echo $res->time_limit?></b></td>
+                           <?php }?>
 
-                            <td><?php echo $res->nama_lengkap?></td>
-                            <td class="text-center"><a href="javascript:void(0);" class="bs-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" data-original-title="Delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle table-cancel"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></a></td>
-                        </tr>
-                    <?php }?>
-                </tbody>
+                           <td><?php echo $res->nama_lengkap?></td>
+                           <td class="text-center"><a href="javascript:void(0);" class="bs-tooltip" data-bs-toggle="modal" data-bs-target="#exampleModal" title="Delete" data-original-title="Delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle table-cancel"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></a></td>
+                       </tr>
+                       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                      <svg> ... </svg>
+                                  </button>
+                              </div>
+                              <div class="modal-body">
+                                <p class="modal-text">Mauris mi tellus, pharetra vel mattis sed, tempus ultrices eros. Phasellus egestas sit amet velit sed luctus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse potenti. Vivamus ultrices sed urna ac pulvinar. Ut sit amet ullamcorper mi. </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn" data-bs-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
+                                <button type="button" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            <?php }?>
+        </tbody>
 
-            </table>
-        </div>
-    </div>
+    </table>
+</div>
+</div>
 </div>
 </div>
 <script src="<?php echo base_url(); ?>assets/src/plugins/src/global/vendors.min.js"></script>

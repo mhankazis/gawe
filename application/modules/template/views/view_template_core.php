@@ -10,6 +10,9 @@
     <link href="<?php echo base_url(); ?>assets/src/assets/css/light/users/account-setting.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(); ?>assets/layouts/vertical-light-menu/css/light/loader.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(); ?>assets/layouts/vertical-light-menu/css/dark/loader.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url(); ?>assets/src/assets/css/light/components/modal.css" rel="stylesheet" type="text/css">
+
+    
     <script src="<?php echo base_url(); ?>assets/layouts/vertical-light-menu/loader.js"></script>
     
     
