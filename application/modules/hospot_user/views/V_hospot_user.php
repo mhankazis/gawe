@@ -49,9 +49,9 @@
                            <?php }?>
 
                            <td><?php echo $res->nama_lengkap?></td>
-                           <td class="text-center"><a href="javascript:void(0);" class="bs-tooltip" data-bs-toggle="modal" data-bs-target="#exampleModal" title="Delete" data-original-title="Delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle table-cancel"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></a></td>
+                           <td class="text-center"><a href="javascript:void(0);" class="bs-tooltip" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $res->id_customer?>" title="Delete" data-original-title="Delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle table-cancel"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></a></td>
                        </tr>
-                       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                       <div class="modal fade" id="exampleModal<?php echo $res->id_customer?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -61,11 +61,12 @@
                                   </button>
                               </div>
                               <div class="modal-body">
-                                <p class="modal-text">Mauris mi tellus, pharetra vel mattis sed, tempus ultrices eros. Phasellus egestas sit amet velit sed luctus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse potenti. Vivamus ultrices sed urna ac pulvinar. Ut sit amet ullamcorper mi. </p>
+                                <label style="font-size:1.2em;color:red;margin-top: -10px;margin-bottom: -6px;" class="control-label">Are you sure to remove this data ?<br>[ ID : <?php echo $res->id_customer?> ]</label>
                             </div>
                             <div class="modal-footer">
                                 <button class="btn" data-bs-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
-                                <button type="button" class="btn btn-primary">Save</button>
+                                
+                                <a class="btn btn-danger" href="<?php echo base_url('hospot_user/hapus/'. $res->id_customer) ?>">Remove</a>
                             </div>
                         </div>
                     </div>

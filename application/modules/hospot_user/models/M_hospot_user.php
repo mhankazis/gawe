@@ -293,7 +293,7 @@ class M_hospot_user extends CI_Model {
 
 	function hapus($id)
 	{
-		$this->db->where('id_pengumuman', $id)->delete('pengumuman');
+		$this->db->where('id_customer', $id)->delete('customer_information');
 	}
 
 	function cari()
