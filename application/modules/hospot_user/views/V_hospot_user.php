@@ -34,9 +34,15 @@
                             <td class="text-center"><?php echo $res->id_customer?></td>
                             <td><?php echo $res->name?></td>
                             <td><?php echo $res->type_service?></td>
-                            <td><?php echo $res->id_service_plan?></td>
-                            <td>-</td>
+                            <td><?php echo $res->plan_name?></td>
                             <td><?php echo $res->due_date?></td>
+                            <?php
+                            if ($res->time_limit=='unlimited') 
+                                {?>
+                               <td style="color: #00c0ef"><b>unlimited</b></td>
+                            <?php } else{?>
+                                 <td><b><?php echo $res->time_limit?></b></td>
+                             <?php }?>
 
                             <td><?php echo $res->id_data_owner?></td>
                             <td class="text-center"><a href="javascript:void(0);" class="bs-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" data-original-title="Delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle table-cancel"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></a></td>

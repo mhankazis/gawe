@@ -7,11 +7,30 @@ class M_hospot_user extends CI_Model {
 	{
 		
 		$this->db->select('*')
-		->join('customer_service', 'customer_service.id_customer = customer_information.id_customer')
-		 ->order_by(`nama_kelas`, "desc");
+		->join('customer_information', 'customer_information.id_customer = customer_service.id_customer')
+		->join('service_plan', 'service_plan.id_service_plan = customer_service.id_service_plan');
+		// ->join('data_owner', 'data_owner.id_service_plan = customer_service.id_service_plan');
 	
-		$query = $this->db->get('customer_information');
+		$query = $this->db->get('customer_service');
 		return $query->result();
+	}
+
+	function show_service_plan()
+	{
+		
+		// $this->db->select('*')
+		// ->join('customer_service', 'customer_service.id_service_plan = service_plan.id_service_plan');
+	
+		// $query = $this->db->get('service_plan');
+		// return $query->result();
+	}
+
+	function data_owner($id_owner)
+	{
+		$this->db->select('*')
+			->where('tb_login.id_user',$id_owner);
+			$query = $this->db->get('tb_login');
+			return $query->row_array();
 	}
 
 

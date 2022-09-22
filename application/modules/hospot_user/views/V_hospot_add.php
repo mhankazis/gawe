@@ -110,9 +110,8 @@
                                                                                     <label for="country">Data Owner</label>
                                                                                     <select name="data_owner"  class="form-select mb-3" id="select-state" >
 
-                                                                                        <option value="1">1</option>
-                                                                                        <option value="2">2</option>
-                                                                                        <option value="3">3</option>
+                                                                                        <option value="1"><?php echo $data_owner['nama_lengkap']?></option>
+                                                                                    
 
                                                                                     </select>
                                                                                 </div>

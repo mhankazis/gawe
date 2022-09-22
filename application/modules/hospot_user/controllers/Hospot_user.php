@@ -19,6 +19,7 @@ class Hospot_user extends MX_Controller {
 			'namamodule' 	=> "Hospot_user",
 			'namafileview' 	=> "V_Hospot_user",
 			'show'		=> $this->M_Hospot_user->show(),
+			'show_service_plan'		=> $this->M_Hospot_user->show_service_plan(),
 			
 			// 'tampil_dudi'		=> $this->M_Hospot_user->tampil_dudi(),
 		);
@@ -42,6 +43,8 @@ class Hospot_user extends MX_Controller {
 
 	function add_customer()
 	{
+		
+
 		$this->M_Hospot_user->add_customer();
 		
 	}
@@ -56,11 +59,13 @@ class Hospot_user extends MX_Controller {
 	}
 	function service_plan($id)
 	{
+		$id_owner = $this->session->userdata('session_id');
 
 		$data = array(
 			'namamodule' 	=> "Hospot_user",
 			'namafileview' 	=> "V_Hospot_add",
 			'id' 	=> $id,
+			'data_owner'		=> $this->M_Hospot_user->data_owner($id_owner),
 
 			
 		);
