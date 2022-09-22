@@ -66,6 +66,8 @@ class Hospot_user extends MX_Controller {
 			'namafileview' 	=> "V_Hospot_add",
 			'id' 	=> $id,
 			'data_owner'		=> $this->M_Hospot_user->data_owner($id_owner),
+			'show_service_plan'		=> $this->M_Hospot_user->show_service_plan(),
+			'show_server'		=> $this->M_Hospot_user->show_server(),
 
 			
 		);

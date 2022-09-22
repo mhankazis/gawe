@@ -8,8 +8,8 @@ class M_hospot_user extends CI_Model {
 		
 		$this->db->select('*')
 		->join('customer_information', 'customer_information.id_customer = customer_service.id_customer')
-		->join('service_plan', 'service_plan.id_service_plan = customer_service.id_service_plan');
-		// ->join('data_owner', 'data_owner.id_service_plan = customer_service.id_service_plan');
+		->join('service_plan', 'service_plan.id_service_plan = customer_service.id_service_plan')
+		->join('tb_login', 'tb_login.id_user = customer_service.id_user');
 	
 		$query = $this->db->get('customer_service');
 		return $query->result();
@@ -18,11 +18,12 @@ class M_hospot_user extends CI_Model {
 	function show_service_plan()
 	{
 		
-		// $this->db->select('*')
-		// ->join('customer_service', 'customer_service.id_service_plan = service_plan.id_service_plan');
-	
-		// $query = $this->db->get('service_plan');
-		// return $query->result();
+		return $this->db->get('service_plan')->result();
+	}
+	function show_server()
+	{
+		
+		return $this->db->get('server_name')->result();
 	}
 
 	function data_owner($id_owner)

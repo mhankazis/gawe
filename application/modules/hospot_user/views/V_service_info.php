@@ -67,7 +67,7 @@
                                                                         <div style="margin-bottom: 20px" class="col-md-6">
                                                                             <div class="form-group">
                                                                                 <label for="address"> <b>Customer ID</b></label>
-                                                                                <input type="text" name="id_customer" class="form-control mb-3" id="address" placeholder="Customer ID"  >
+                                                                                <input required type="text" name="id_customer" class="form-control mb-3" id="address" placeholder="Customer ID"  >
                                                                                 <p style="margin-top: -10px;     font-size: smaller;">LETTERS AND NUMBERS ONLY</p>
                                                                             </div>
                                                                         </div>
@@ -76,12 +76,12 @@
                                                                         <div class="col-md-6">
                                                                             <div class="form-group">
                                                                                 <label for="address"><b>Name</b></label>
-                                                                                <input name="name" type="text" class="form-control mb-3" id="address" placeholder="Full Name" >
+                                                                                <input required name="name" type="text" class="form-control mb-3" id="address" placeholder="Full Name" >
                                                                             </div>
                                                                         </div>
                                                                         <div style="margin-bottom: 15px" class="col-md-12"><div class="form-group">
                                                                             <label for="address"><b> ID Card | Driver Licence | Passport</b></label>
-                                                                            <input type="text" name="id_card" class="form-control mb-3" id="address" placeholder="0000000000000000000000000" >
+                                                                            <input required type="text" name="id_card" class="form-control mb-3" id="address" placeholder="0000000000000000000000000" >
                                                                         </div></div>
 
 
@@ -89,7 +89,7 @@
                                                                         <div style="margin-bottom: 15px" class="col-md-6">
                                                                             <div class="form-group">
                                                                                 <label for="address"><b>  Mobile Phone</b></label>
-                                                                                <input type="text" name="mobile" class="form-control mb-3" id="address" placeholder="International Phone Format" >
+                                                                                <input required type="text" name="mobile" class="form-control mb-3" id="address" placeholder="International Phone Format" >
 
 
                                                                             </div>
@@ -100,7 +100,7 @@
 
                                                                             <div class="form-group">
                                                                                 <label for="address"><b>  Email</b></label>
-                                                                                <input type="email" name="email" class="form-control mb-3" id="address" placeholder="Example@mail.com" >
+                                                                                <input required type="email" name="email" class="form-control mb-3" id="address" placeholder="Example@mail.com" >
                                                                             </div>
                                                                             
                                                                         </div>
@@ -108,7 +108,7 @@
 
                                                                             <div class="form-group">
                                                                                 <label for="address"><b>  Username</b></label>
-                                                                                <input type="text" name="username" class="form-control mb-3" id="address" placeholder="Username" >
+                                                                                <input required type="text" name="username" class="form-control mb-3" id="address" placeholder="Username" >
                                                                             </div>
                                                                             
                                                                         </div>
@@ -116,7 +116,7 @@
 
                                                                             <div class="form-group">
                                                                                 <label for="address"><b>  Password</b></label>
-                                                                                <input type="text" name="password" class="form-control mb-3" id="address" placeholder="Password" >
+                                                                                <input required type="text" name="password" class="form-control mb-3" id="address" placeholder="Password" >
                                                                             </div>
                                                                             
                                                                         </div>

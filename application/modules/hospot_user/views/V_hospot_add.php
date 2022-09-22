@@ -50,7 +50,7 @@
                                                                         <div class="col-md-6">
                                                                             <div  class="form-group">
                                                                                 <label style="margin-bottom: 20px" for="profession"> Type</label><br>
-                                                                                <input name="type_service" value="hotspot" class="form-check-input" type="radio" name="radio-checked" id="form-check-radio-default">
+                                                                                <input required name="type_service" value="hotspot" class="form-check-input" type="radio" name="radio-checked" id="form-check-radio-default">
                                                                                 <label class="form-check-label" for="form-check-radio-default">
                                                                                     HOTSPOT
                                                                                 </label></div>
@@ -59,12 +59,10 @@
                                                                             <div style="margin-bottom: 35px" class="col-md-6">
                                                                                 <div class="form-group">
                                                                                     <label for="profession">Server Name</label>
-                                                                                    <select name="sever_name" class="form-select" id="exampleFormControlSelect1">
-                                                                                        <option value="1">1</option>
-                                                                                        <option value="2">2</option>
-                                                                                        <option value="3">3</option>
-                                                                                        <option value="4">4</option>
-                                                                                        <option value="5">5</option>
+                                                                                    <select required name="sever_name" class="form-select" id="exampleFormControlSelect1">
+                                                                                        <?php foreach ($show_server as $sv) {?>
+                                                                                        <option value="<?php echo $sv->id_server_name?>"><?php echo $sv->name_server?></option>
+                                                                                        <?php }?>
                                                                                     </select>
 
                                                                                 </div>
@@ -74,7 +72,7 @@
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
                                                                                     <label for="country">Payment Type</label>
-                                                                                    <select name="payment_type" id="payment_type"  class="form-select mb-3">
+                                                                                    <select  name="payment_type" id="payment_type"  class="form-select mb-3">
 
                                                                                         <option value="PREPAID" id="prepaid">PREPAID</option>
                                                                                         <option value="POSTPAID" id="postpaid">POSTPAID</option>
@@ -111,7 +109,7 @@
                                                                                     <select name="data_owner"  class="form-select mb-3" id="select-state" >
 
                                                                                         <option value="1"><?php echo $data_owner['nama_lengkap']?></option>
-                                                                                    
+
 
                                                                                     </select>
                                                                                 </div>
@@ -132,11 +130,11 @@
                                                                                 <div class="form-group">
                                                                                     <label for="country">Service Plan</label>
                                                                                     <select name="service_plan"  class="form-select mb-3" id="select-state" >
+                                                                                        <?php foreach ($show_service_plan as $ee) {?>
 
 
-                                                                                        <option value="1">1</option>
-                                                                                        <option value="2">2</option>
-                                                                                        <option value="3">3</option>
+                                                                                            <option value="<?php echo $ee->id_service_plan?>"><?php echo $ee->plan_name?></option>
+                                                                                        <?php }?>
 
 
                                                                                     </select>
@@ -175,11 +173,11 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-12">
-                                                                               <label for="address"><b>Nominal Writing :</b></label>
-                                                                               <span class="help-block text-green text-bold"><ul><li>Without thousands separator, use dot (.) for fractions</li><li>Reseller Fee : can be set manually or set to zero ( 0 ) if you want to use<br> fee from the profile sell price</li></ul></span></div>
+                                                                             <label for="address"><b>Nominal Writing :</b></label>
+                                                                             <span class="help-block text-green text-bold"><ul><li>Without thousands separator, use dot (.) for fractions</li><li>Reseller Fee : can be set manually or set to zero ( 0 ) if you want to use<br> fee from the profile sell price</li></ul></span></div>
 
 
-                                                                               <div style="margin-top: 15px" class="col-md-12">
+                                                                             <div style="margin-top: 15px" class="col-md-12">
                                                                                 <div class="form-group">
 
                                                                                     <label for="address">Change Due Date - Optional</label>
@@ -353,18 +351,18 @@
 <!--  END FOOTER  -->
 
 <script>
-   $("#payment_type").change(function(){
+ $("#payment_type").change(function(){
     if ($('#prepaid').is(':selected')) {
-       $('#unpaid').removeAttr('selected'); 
-       $('#paid').attr('selected','selected'); 
-       $('#trx_status').removeAttr('disabled');
-   }
+     $('#unpaid').removeAttr('selected'); 
+     $('#paid').attr('selected','selected'); 
+     $('#trx_status').removeAttr('disabled');
+ }
 
-   if ($('#postpaid').is(':selected')) {
-       $('#paid').removeAttr('selected'); 
-       $('#unpaid').attr('selected','selected');
-       $('#trx_status').attr('disabled','disabled'); 
-   }
+ if ($('#postpaid').is(':selected')) {
+     $('#paid').removeAttr('selected'); 
+     $('#unpaid').attr('selected','selected');
+     $('#trx_status').attr('disabled','disabled'); 
+ }
 });   
-   
+
 </script>
