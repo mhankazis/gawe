@@ -55,8 +55,21 @@ class Hospot_user extends MX_Controller {
 		redirect('Hospot_user');
 		
 		// echo $id;
-		
 	}
+
+	function edit_user($id)
+	{
+		$data = array(
+			'namamodule' 	=> "hospot_user",
+			'namafileview' 	=> "V_service_info_edit",
+			'show'		=> $this->M_Hospot_user->show_edit($id),
+			// 'show_service_plan'		=> $this->M_Hospot_user->show_service_plan(),
+			
+			// 'tampil_dudi'		=> $this->M_Hospot_user->tampil_dudi(),
+		);
+		echo Modules::run('template/tampilCore', $data);
+	}
+
 	function service_plan($id)
 	{
 		$id_owner = $this->session->userdata('session_id');

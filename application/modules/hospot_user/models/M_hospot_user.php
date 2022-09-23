@@ -15,6 +15,19 @@ class M_hospot_user extends CI_Model {
 		return $query->result();
 	}
 
+	function show_edit($id)
+	{
+		
+		$this->db->select('*')
+		->join('customer_information', 'customer_information.id_customer = customer_service.id_customer')
+		->join('service_plan', 'service_plan.id_service_plan = customer_service.id_service_plan')
+		->join('tb_login', 'tb_login.id_user = customer_service.id_user')
+		->where('customer_service.id_customer',$id);
+	
+		$query = $this->db->get('customer_service');
+		return $query->row_array();
+	}
+
 	function show_service_plan()
 	{
 		

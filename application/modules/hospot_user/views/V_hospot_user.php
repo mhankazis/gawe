@@ -53,7 +53,7 @@
 
                                  <td><?php echo $res->nama_lengkap?></td>
                                  <td class="text-center">
-                                    <a href="<?php echo base_url('hospot_user/edit_hospot/')?>?id=<?php echo $res->id_customer?>"  title="Edit" data-original-title="Delete">
+                                    <a href="<?php echo base_url('hospot_user/edit_user/')?><?php echo $res->id_customer?>"  title="Edit" data-original-title="Delete">
                                        <i data-feather="edit"></i>
                                     </a>
 
