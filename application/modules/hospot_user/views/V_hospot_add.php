@@ -108,7 +108,7 @@
                                                                                     <label for="country">Data Owner</label>
                                                                                     <select name="data_owner"  class="form-select mb-3" id="select-state" >
 
-                                                                                        <option value="1"><?php echo $data_owner['nama_lengkap']?></option>
+                                                                                        <option value="<?php echo $data_owner['id_user']?>"><?php echo $data_owner['nama_lengkap']?></option>
 
 
                                                                                     </select>

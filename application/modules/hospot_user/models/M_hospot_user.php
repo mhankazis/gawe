@@ -100,7 +100,7 @@ class M_hospot_user extends CI_Model {
 		$data = array(
 			'id_customer'		=> $id,
 			'id_server_name'	=> $id_server_name,
-			'id_data_owner' 	=> $id_data_owner,
+			'id_user' 	=> $id_data_owner,
 			'id_service_plan'			=>$id_service_plan,
 			'type_service'			=>$type_service,
 			'payment_type'				=>$payment_type,
