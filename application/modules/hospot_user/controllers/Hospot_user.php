@@ -70,13 +70,36 @@ class Hospot_user extends MX_Controller {
 		echo Modules::run('template/tampilCore', $data);
 	}
 
+	function edit_service_plan($id)
+	{
+		$id_owner = $this->session->userdata('session_id');
+		$data = array(
+			'namamodule' 	=> "hospot_user",
+			'namafileview' 	=> "V_service_plan_edit",
+			'show'		=> $this->M_Hospot_user->show_edit($id),
+			'data_owner'		=> $this->M_Hospot_user->data_owner($id_owner),
+			'id'		=>$id,
+			'show_service_plan'		=> $this->M_Hospot_user->show_service_plan(),
+			'show_server'		=> $this->M_Hospot_user->show_server(),
+
+		);
+		echo Modules::run('template/tampilCore', $data);
+	}
+
 
 	function action_edit_user($id)
 	{
 		$this->M_Hospot_user->action_edit_user($id);
-		redirect('Hospot_user');
+//		redirect('Hospot_user');
+
 		
 		// echo $id;
+	}
+	function action_edit_plan($id)
+	{
+		$id_plan = $_POST['id_customer_service'];
+		$this->M_Hospot_user->action_edit_plan($id,$id_plan);
+
 	}
 
 
@@ -170,4 +193,3 @@ class Hospot_user extends MX_Controller {
 	}
 	
 }
- 

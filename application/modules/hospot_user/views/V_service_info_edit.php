@@ -20,10 +20,10 @@
             <a class="nav-link mb-2 mx-auto active" id="rounded-vertical-pills-home-tab" data-bs-toggle="pill" href="#rounded-vertical-pills-home" role="tab" aria-controls="rounded-vertical-pills-home" aria-selected="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Customer Info</a>
 
 
-            <a class="nav-link mb-2 mx-auto" id="rounded-vertical-pills-profile-tab" href="zz" aria-controls="rounded-vertical-pills-profile" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> Service Plan</a>
+            <a class="nav-link mb-2 mx-auto" id="rounded-vertical-pills-profile-tab" href="<?php echo base_url('hospot_user/edit_service_plan/')?><?php echo $show['id_customer']?>" aria-controls="rounded-vertical-pills-profile" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> Service Plan</a>
 
 
-            <a class="nav-link mb-2 mx-auto" id="rounded-vertical-pills-messages-tab" data-bs-toggle="pill" href="#rounded-vertical-pills-messages" role="tab" aria-controls="rounded-vertical-pills-messages" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Customer Report</a>
+            <a class="nav-link mb-2 mx-auto" id="rounded-vertical-pills-messages-tab"  href="<?php echo base_url('hospot_user/user_history/')?><?php echo $show['id_customer']?>"  aria-controls="rounded-vertical-pills-messages" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Invoice History</a>
           </div>
         </div>
 
@@ -42,17 +42,17 @@
                           <label for="profession"><b>ODP | POP ( Optional )   </b></label>
                           <select required name="odp" class="form-select" id="exampleFormControlSelect1">
                             <option value="- No ODP | POP -">No ODP | POP -</option>
-                            <option value="ODP CAREK - ODP CAREK 002-001-000">ODP CAREK - ODP CAREK 002-001-000</option>
+                            <option <?php echo ($show['odp'] == 'ODP CAREK - ODP CAREK 002-001-000') ? "selected":""?> value="ODP CAREK - ODP CAREK 002-001-000">ODP CAREK - ODP CAREK 002-001-000</option>
 
                           </select>
 
                         </div>
-
+`
                       </div>
                       <div style="margin-bottom: 20px" class="col-md-6">
                         <div class="form-group">
                           <label for="address"> <b>Customer ID</b></label>
-                          <input value="<?php echo $show['id_customer'] ?>" required type="text" name="id_customer" class="form-control mb-3" id="address" placeholder="Customer ID"  >
+                          <input value="<?php echo $show['id_customer'] ?>" required readonly type="text" name="id_customer" class="form-control mb-3" id="address" placeholder="Customer ID"  >
                           <p style="margin-top: -10px;     font-size: smaller;">LETTERS AND NUMBERS ONLY</p>
                         </div>
                       </div>
