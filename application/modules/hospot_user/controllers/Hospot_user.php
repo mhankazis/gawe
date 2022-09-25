@@ -70,6 +70,24 @@ class Hospot_user extends MX_Controller {
 		echo Modules::run('template/tampilCore', $data);
 	}
 
+
+	function action_edit_user($id)
+	{
+		$this->M_Hospot_user->action_edit_user($id);
+		redirect('Hospot_user');
+		
+		// echo $id;
+	}
+
+
+
+
+
+
+
+
+
+
 	function service_plan($id)
 	{
 		$id_owner = $this->session->userdata('session_id');

@@ -35,8 +35,8 @@
 
                   <div class="col-xl-12 col-lg-12 col-md-8 mt-md-0 mt-4">
 
-
-                    <div class="row">
+                    <form  method="post" action="<?php echo base_url('hospot_user/action_edit_user/'.$show['id_customer']) ?>">
+                      <div class="row">
                       <div style="margin-bottom: 15px" class="col-md-12">
                         <div class="form-group">
                           <label for="profession"><b>ODP | POP ( Optional )   </b></label>
@@ -52,7 +52,7 @@
                       <div style="margin-bottom: 20px" class="col-md-6">
                         <div class="form-group">
                           <label for="address"> <b>Customer ID</b></label>
-                          <input value="<?php echo $show['id_customer'] ?> " required type="text" name="id_customer" class="form-control mb-3" id="address" placeholder="Customer ID"  >
+                          <input value="<?php echo $show['id_customer'] ?>" required type="text" name="id_customer" class="form-control mb-3" id="address" placeholder="Customer ID"  >
                           <p style="margin-top: -10px;     font-size: smaller;">LETTERS AND NUMBERS ONLY</p>
                         </div>
                       </div>
@@ -61,12 +61,12 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="address"><b>Name</b></label>
-                          <input required name="name" value="<?php echo $show['name'] ?> " type="text" class="form-control mb-3" id="address" placeholder="Full Name" >
+                          <input required name="name" value="<?php echo $show['name'] ?>" type="text" class="form-control mb-3" id="address" placeholder="Full Name" >
                         </div>
                       </div>
                       <div style="margin-bottom: 15px" class="col-md-12"><div class="form-group">
                         <label for="address"><b> ID Card | Driver Licence | Passport</b></label>
-                        <input value="<?php echo $show['id_card'] ?> " required type="text" name="id_card" class="form-control mb-3" id="address" placeholder="0000000000000000000000000" >
+                        <input value="<?php echo $show['id_card'] ?>" required type="text" name="id_card" class="form-control mb-3" id="address" placeholder="0000000000000000000000000" >
                       </div></div>
 
 
@@ -74,7 +74,7 @@
                       <div style="margin-bottom: 15px" class="col-md-6">
                         <div class="form-group">
                           <label for="address"><b>  Mobile Phone</b></label>
-                          <input value="<?php echo $show['mobile'] ?> " required type="text" name="mobile" class="form-control mb-3" id="address" placeholder="International Phone Format" >
+                          <input value="<?php echo $show['mobile'] ?>" required type="text" name="mobile" class="form-control mb-3" id="address" placeholder="International Phone Format" >
 
 
                         </div>
@@ -85,7 +85,7 @@
 
                         <div class="form-group">
                           <label for="address"><b>  Email</b></label>
-                          <input value="<?php echo $show['email'] ?> " required type="email" name="email" class="form-control mb-3" id="address" placeholder="Example@mail.com" >
+                          <input value="<?php echo $show['email'] ?>" required type="email" name="email" class="form-control mb-3" id="address" placeholder="Example@mail.com" >
                         </div>
 
                       </div>
@@ -93,7 +93,7 @@
 
                         <div class="form-group">
                           <label for="address"><b>  Username</b></label>
-                          <input value="<?php echo $show['username'] ?> " required type="text" name="username" class="form-control mb-3" id="address" placeholder="Username" >
+                          <input value="<?php echo $show['username'] ?>" required type="text" name="username" class="form-control mb-3" id="address" placeholder="Username" >
                         </div>
 
                       </div>
@@ -101,7 +101,7 @@
 
                         <div class="form-group">
                           <label for="address"><b>  Password</b></label>
-                          <input value="<?php echo $show['password'] ?> " required type="password" name="password" class="form-control mb-3" id="address" placeholder="Password" >
+                          <input value="<?php echo $show['password'] ?>" required type="password" name="password" class="form-control mb-3" id="address" placeholder="Password" >
                         </div>
 
                       </div>
@@ -147,7 +147,7 @@
 
                       <div class="col-md-12 mt-5">
                         <div class="form-group text-end">
-                          <button type="submit" class="btn btn-secondary">Add Customer</button>
+                          <button type="submit" class="btn btn-secondary">Edit User</button>
                         </div>
                       </div>
 
@@ -155,6 +155,9 @@
 
 
                     </div>
+                      
+                    </form>
+                    
                   </div>
                 </div>
               </div>
