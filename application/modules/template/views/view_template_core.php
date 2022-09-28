@@ -15,6 +15,8 @@
     <link href="<?php echo base_url(); ?>assets/src/assets/css/light/components/tabs.css" rel="stylesheet" type="text/css" />
     
     <script src="<?php echo base_url(); ?>assets/layouts/vertical-light-menu/loader.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     
     
     

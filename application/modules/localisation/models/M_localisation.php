@@ -7,6 +7,61 @@ class M_localisation extends CI_Model {
 	{
 		return $this->db->get('pengumuman')->result();
 	}
+
+	function show()
+	{
+		$id=1;
+		$this->db->select('*')
+			->from('website_setting')
+			->where('id_website_setting',$id);
+		$query = $this->db->get();
+		return $query->row_array();
+	}
+
+
+
+	function website_setting()
+	{
+		$id=1;
+		$time_zone 		= $this->input->post('time_zone');
+		$date_format	= $this->input->post('date_format');
+		$currency	= $this->input->post('currency');
+		$decimal_point	= $this->input->post('decimal_point');
+		$thousands_separator	= $this->input->post('thousands_separator');
+		$default_language	= $this->input->post('default_language');
+
+
+
+		$data = array(
+			'time_zone'		=> $time_zone,
+			'date_format'		=> $date_format,
+			'currency' 				=> $currency,
+			'decimal_point'						=>$decimal_point,
+			'thousands_separator'						=>$thousands_separator,
+			'default_language'						=>$default_language,
+
+
+		);
+		$this->db->where('id_website_setting',$id)->update('website_setting', $data);
+
+
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	function show_general()
 	{
 		$id=1;
@@ -91,28 +146,7 @@ class M_localisation extends CI_Model {
 
 	}
 
-	function tambah()
-	{
-		$judul_pengumuman 		= $this->input->post('judul_pengumuman');
-		$tanggal	= $this->input->post('tanggal');
-		$isi_pengumuman	= $this->input->post('isi_pengumuman');
-		$tertuju	= $this->input->post('tertuju');
 
-		
-
-		$data = array(
-			'judul_pengumuman'		=> $judul_pengumuman,
-			'tanggal'		=> $tanggal,
-			'isi_pengumuman' 				=> $isi_pengumuman,
-			'tertuju'						=>$tertuju,
-
-
-		);
-		$this->db->insert('pengumuman', $data);
-
-
-		
-	}
 
 
 	function add_general_setting()
