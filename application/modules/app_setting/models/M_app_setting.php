@@ -113,6 +113,41 @@ class M_app_setting extends CI_Model {
 
 		
 	}
+
+
+	function add_general_setting()
+	{
+		$id_general=$_POST["id_general"];
+		$company_name=$_POST["company_name"];
+		$company_mobile=$_POST["company_mobile"];
+		$company_acc_invoice=$_POST["company_acc_invoice"];
+		$company_bank=$_POST["company_bank"];
+		$company_acc_name=$_POST["company_acc_name"];
+		$company_acc_number=$_POST["company_acc_number"];
+		$company_auto_invoice=$_POST["company_auto_invoice"];
+		$company_lock_renewal=$_POST["company_lock_renewal"];
+		$company_address=$_POST["company_address"];
+
+
+
+		$data = array(
+			'company_name'		=> $company_name,
+			'company_mobile'		=> $company_mobile,
+			'company_invoice' 				=> $company_acc_invoice,
+			'company_bank'						=>$company_bank,
+			'company_acc_name'		=> $company_acc_name,
+			'company_acc_number' 				=> $company_acc_number,
+			'company_auto_invoice'						=>$company_auto_invoice,
+			'company_lock_renewal'		=> $company_lock_renewal,
+			'company_address' 				=> $company_address,
+
+
+		);
+		$this->db->where('id_general',$id_general)->update('general_setting', $data);
+
+
+
+	}
 	// function tampil_dudi()
 	// {
 	// 	$this->db->select('*')

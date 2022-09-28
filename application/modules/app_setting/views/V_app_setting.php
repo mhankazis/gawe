@@ -31,6 +31,7 @@
 					<div class="col-12">
 						<label for="inputAddress2" class="form-label">Invoice Description</label>
 						<input value="<?php echo $show_general['company_invoice']?>" name="company_acc_invoice" type="text" class="form-control" id="inputAddress2" >
+						<input type="hidden" name="id_general" value="<?php echo $show_general['id_general'] ?>">
 					</div>
 					<div class="col-md-4">
 						<label for="inputCity" class="form-label">Bank</label>

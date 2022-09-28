@@ -52,28 +52,11 @@ class App_setting extends MX_Controller {
 	}
 	function add_general_setting()
 	{
-//		$this->M_app_setting->tambah();
-//		redirect('app_setting');
+		$this->M_app_setting->add_general_setting();
+		redirect('app_setting');
 
-		$company_name=$_POST["company_name"];
-		$company_mobile=$_POST["company_mobile"];
-		$company_acc_invoice=$_POST["company_acc_invoice"];
-		$company_bank=$_POST["company_bank"];
-		$company_acc_name=$_POST["company_acc_name"];
-		$company_acc_number=$_POST["company_acc_number"];
-		$company_auto_invoice=$_POST["company_auto_invoice"];
-		$company_lock_renewal=$_POST["company_lock_renewal"];
-		$company_address=$_POST["company_address"];
 
-		echo $company_name;
-		echo $company_mobile;
-		echo $company_acc_invoice;
-		echo $company_bank;
-		echo $company_acc_name;
-		echo $company_acc_number;
-		echo $company_auto_invoice;
-		echo $company_lock_renewal;
-		echo $company_address;
+
 
 
 
