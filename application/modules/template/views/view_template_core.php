@@ -409,7 +409,7 @@
 
 
 
-		<?php if($this->uri->segment('1') == 'app_setting'){ ?>
+		<?php if($this->uri->segment('1') == 'app_setting' || $this->uri->segment('1') == 'localisation' ){ ?>
             <li class="menu active">
 			<a href="#pages" data-bs-toggle="collapse" aria-expanded="true" class="dropdown-toggle collapsed">
                 <div class="">
@@ -434,9 +434,25 @@
 
 
 			<?php }?>
-            <li>
-                <a href="./pages-faq.html"> Localisation </a>
-            </li>
+
+
+
+
+			<?php if($this->uri->segment('1') == 'localisation'){ ?>
+				<li class="active">
+					<a href="<?php echo base_url('localisation'); ?>"> Localisation </a>
+				</li>
+			<?php } else {?>
+				<li>
+					<a href="<?php echo base_url('localisation'); ?>"> Localisation</a>
+				</li>
+
+
+			<?php }?>
+
+
+
+
             <li>
                 <a href="./pages-contact-us.html" target="_blank"> User Management </a>
             </li>
