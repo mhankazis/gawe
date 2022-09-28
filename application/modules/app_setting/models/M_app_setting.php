@@ -16,15 +16,7 @@ class M_app_setting extends CI_Model {
 		$query = $this->db->get();
 		return $query->row_array();
 	}
- function hitsi()
-	{
-		
-		$this->db->select('*')
-		->from('siswa');
-		$query = $this->db->get();
-		return $query->num_rows();
 
-	}
 	function detail()
 	{
 		return $this->db
@@ -45,51 +37,15 @@ class M_app_setting extends CI_Model {
 	}
 	function hitdudi()
 	{
-		
+
 		$this->db->select('*')
 		->from('dudi');
 		$query = $this->db->get();
 		return $query->num_rows();
 
 	}
-	function hitgel1()
-	{
-		$i=1;
-		$this->db->select('*')
-		->from('siswa')
-		->where('gelombang',$i);
-		$query = $this->db->get();
-		return $query->num_rows();
 
-	}
-	function hitgel2()
-	{
-		$i=2;
-		$this->db->select('*')
-		->from('siswa')
-		->where('gelombang',$i);
-		$query = $this->db->get();
-		return $query->num_rows();
-
-	}
-	function hitjurusan()
-	{
-		
-		$this->db->select('*')
-		->from('jurusan');
-		$query = $this->db->get();
-		return $query->num_rows();
-
-	}
-	function hitkelas()
-	{
-		
-		$this->db->select('*')
-		->from('kelas');
-		$query = $this->db->get();
-		return $query->num_rows();
-
-	}
+	
 
 	function tambah()
 	{
