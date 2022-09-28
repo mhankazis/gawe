@@ -409,12 +409,10 @@
 
 
 
-            <li class="menu"
-            >             <a href="#pages" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
+		<?php if($this->uri->segment('1') == 'app_setting'){ ?>
+            <li class="menu active">
+			<a href="#pages" data-bs-toggle="collapse" aria-expanded="true" class="dropdown-toggle collapsed">
                 <div class="">
-
-
-
 
                   <i data-feather="settings"></i>
 
@@ -424,10 +422,18 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </div>
         </a>
-        <ul class="submenu list-unstyled collapse" id="pages" data-bs-parent="#accordionExample" style="">
-            <li>
-                <a href="./pages-knowledge-base.html"> General Setting </a>
+        <ul class="collapse submenu list-unstyled show" id="pages" data-bs-parent="#accordionExample" style="">
+			<?php if($this->uri->segment('1') == 'app_setting'){ ?>
+            <li class="active">
+                <a href="<?php echo base_url('app_setting'); ?>"> General Setting </a>
             </li>
+			<?php } else {?>
+				<li>
+					<a href="<?php echo base_url('app_setting'); ?>"> General Setting </a>
+				</li>
+
+
+			<?php }?>
             <li>
                 <a href="./pages-faq.html"> Localisation </a>
             </li>
@@ -469,6 +475,67 @@
             </li>
         </ul>
     </li>
+		<?php } else{?>
+			<li class="menu"
+			>             <a href="#pages" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
+					<div class="">
+
+						<i data-feather="settings"></i>
+
+						<span>App Setting</span>
+					</div>
+					<div>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+					</div>
+				</a>
+				<ul class="submenu list-unstyled collapse" id="pages" data-bs-parent="#accordionExample" style="">
+					<li>
+						<a href="<?php echo base_url('app_setting'); ?>"> General Setting </a>
+					</li>
+					<li>
+						<a href="./pages-faq.html"> Localisation </a>
+					</li>
+					<li>
+						<a href="./pages-contact-us.html" target="_blank"> User Management </a>
+					</li>
+					<li>
+						<a href="./pages-error404.html" target="_blank"> Invoice Logo </a>
+					</li>
+					<li>
+						<a href="./pages-maintenence.html" target="_blank"> Sms Setting </a>
+					</li>
+					<li>
+						<a href="./pages-maintenence.html" target="_blank"> Email Setting </a>
+					</li>
+					<li>
+						<a href="./pages-maintenence.html" target="_blank"> Whatsapp API </a>
+					</li>
+					<li>
+						<a href="./pages-maintenence.html" target="_blank"> Whatsapp API </a>
+					</li>
+					<li>
+						<a href="./pages-maintenence.html" target="_blank"> Google Map API </a>
+					</li>
+					<li>
+						<a href="./pages-maintenence.html" target="_blank"> API Setting </a>
+					</li>
+					<li>
+						<a href="./pages-maintenence.html" target="_blank"> Payment Gateaway </a>
+					</li>
+					<li>
+						<a href="./pages-maintenence.html" target="_blank"> Voucher Template </a>
+					</li>
+					<li>
+						<a href="./pages-maintenence.html" target="_blank"> Hotspot Domain </a>
+					</li>
+					<li>
+						<a href="./pages-maintenence.html" target="_blank"> Called Station </a>
+					</li>
+				</ul>
+			</li>
+
+
+					<?php }?>
 
 
     <li class="menu">
