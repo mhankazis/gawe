@@ -401,7 +401,7 @@
                         </li>
                         <li>
                             <a href="./user-account-settings.html"> Mapping User </a>
-                            
+
                         </li>
                     </ul>
                 </li>
@@ -411,7 +411,7 @@
 
 
 
-		<?php if($this->uri->segment('1') == 'app_setting' || $this->uri->segment('1') == 'localisation' ){ ?>
+		<?php if($this->uri->segment('1') == 'app_setting' || $this->uri->segment('1') == 'localisation' || $this->uri->segment('1') == 'user_management' || $this->uri->segment('1') == 'invoice_logo'  ){ ?>
             <li class="menu active">
 			<a href="#pages" data-bs-toggle="collapse" aria-expanded="true" class="dropdown-toggle collapsed">
                 <div class="">
@@ -455,12 +455,35 @@
 
 
 
-            <li>
-                <a href="./pages-contact-us.html" target="_blank"> User Management </a>
-            </li>
-            <li>
-                <a href="./pages-error404.html" target="_blank"> Invoice Logo </a>
-            </li>
+
+
+			<?php if($this->uri->segment('1') == 'user_management'){ ?>
+				<li class="active">
+					<a href="<?php echo base_url('user_management'); ?>"> User Management </a>
+				</li>
+			<?php } else {?>
+				<li>
+					<a href="<?php echo base_url('user_management'); ?>"> User Management</a>
+				</li>
+
+
+			<?php }?>
+
+
+			<?php if($this->uri->segment('1') == 'invoice_logo'){ ?>
+				<li class="active">
+					<a href="<?php echo base_url('invoice_logo'); ?>"> Invoice Logo </a>
+				</li>
+			<?php } else {?>
+				<li>
+					<a href="<?php echo base_url('invoice_logo'); ?>"> Invoice Logo</a>
+				</li>
+
+
+			<?php }?>
+
+
+         	
             <li>
                 <a href="./pages-maintenence.html" target="_blank"> Sms Setting </a>
             </li>

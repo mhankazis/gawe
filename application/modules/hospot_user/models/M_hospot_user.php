@@ -10,10 +10,24 @@ class M_hospot_user extends CI_Model
 		$this->db->select('*')
 			->join('customer_information', 'customer_information.id_customer = customer_service.id_customer')
 			->join('service_plan', 'service_plan.id_service_plan = customer_service.id_service_plan')
-			->join('tb_login', 'tb_login.id_user = customer_service.id_user');
+			->	join('tb_login', 'tb_login.id_user = customer_service.id_user');
 
 		$query = $this->db->get('customer_service');
 		return $query->result();
+	}
+
+	function cek_id($id_customer){
+		$this->db->select('id_customer');
+		$this->db->where('id_customer',$id_customer);
+		$query =$this->db->get('customer_information');
+		$row = $query->row();
+		if ($query->num_rows > 0)
+		{
+			return "";
+		}else{
+
+			return $row->id_customer;
+		}
 	}
 
 	function show_edit($id)
@@ -58,12 +72,11 @@ class M_hospot_user extends CI_Model
 		$id_card = $this->input->post('id_card');
 		$mobile = $this->input->post('mobile');
 		$email = $this->input->post('email');
-		$username = $this->input->post('username');
-		$password = $this->input->post('password');
-		$password_enc = sha1($password);
 
 		$lon = $this->input->post('lon');
 		$lat = $this->input->post('lat');
+
+
 
 
 		$data = array(
@@ -73,15 +86,31 @@ class M_hospot_user extends CI_Model
 			'id_card' => $id_card,
 			'mobile' => $mobile,
 			'email' => $email,
-			'username' => $username,
-			'password' => $password_enc,
 			'latitude' => $lat,
 			'longitude' => $lon,
 
 
 		);
 		$this->db->insert('customer_information', $data);
-		redirect(base_url() . "Hospot_user/service_plan/" . $id_customer);
+
+
+		$insert_id = $this->db->insert_id();
+		$username					= $this->input->post('username');
+		$password 					= $this->input->post('password');
+		$password1 					= sha1($password);
+		$level 						= 2;
+
+		$data = array(
+			'id_customer'			=> $id_customer,
+			'nama_lengkap'				=> $username,
+			'password'				=> $password1,
+			'email'				=> $email,
+			'level'					=> $level,
+
+		);
+
+		$this->db->insert('tb_login', $data);
+		redirect(base_url() . "hospot_user/service_plan/" . $id_customer);
 
 
 	}

@@ -43,14 +43,24 @@ class Hospot_user extends MX_Controller {
 
 	function add_customer()
 	{
-		
+		$id_customer=$_POST['id_customer'];
+		if ($this->M_Hospot_user->cek_id($id_customer)=='')
+		{
+			$this->M_Hospot_user->add_customer();
+		}else
+		{
+			echo "<script>alert ('ID telah terdaftar')</script>";
+			echo "<script>location='hospot_user'</script>";
+		}
 
-		$this->M_Hospot_user->add_customer();
+
+
 		
 	}
 
 	function add_service($id)
 	{
+
 		$this->M_Hospot_user->add_service($id);
 		redirect('Hospot_user');
 		
